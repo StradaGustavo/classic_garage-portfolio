@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio | Classic Garage</title>
+  <meta name="description" content="Veja restaurações reais da Classic Garage: antes e depois de clássicos devolvidos à estrada.">
+  <link rel="icon" type="image/png" href="images/Classic_Garage.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <!-- ============ HEADER (igual ao da home) ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="../index.html#inicio" class="header__logo" aria-label="Classic Garage - início">
+        <img src="images/Classic_Garage.png" alt="Classic Garage - Restauração de carros antigos">
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list" id="navList">
+          <li class="nav__indicator" id="navIndicator" aria-hidden="true"></li>
+          <li><a href="../index.html#inicio" class="nav__link">Início</a></li>
+          <li><a href="../index.html#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#inicio" class="nav__link is-active" aria-current="page">Portfólio</a></li>
+          <li><a href="../index.html#sobre" class="nav__link">Sobre nós</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--small btn--pulse">Entrar em contato</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MENU MOBILE ============ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <button class="drawer__close" id="drawerClose" aria-label="Fechar menu">&times;</button>
+    <img class="drawer__logo" src="images/Classic_Garage.png" alt="Classic Garage">
+    <ul class="drawer__list">
+      <li><a href="../index.html#inicio" class="drawer__link">Início</a></li>
+      <li><a href="../index.html#servicos" class="drawer__link">Serviços</a></li>
+      <li><a href="#inicio" class="drawer__link">Portfólio</a></li>
+      <li><a href="../index.html#sobre" class="drawer__link">Sobre nós</a></li>
+    </ul>
+    <a href="#contato" class="btn btn--pulse drawer__cta">Entrar em contato</a>
+  </aside>
+
+  <!-- ============ TRANSIÇÃO: VELOCÍMETRO (aparece ao clicar nos links para outras páginas) ============
+       Usa as mesmas imagens da home: images/Velocimetro.png e images/Ponteiro.png -->
+  <div class="warp" id="warp" aria-hidden="true">
+    <div class="warp__gauge">
+      <img class="warp__dial" src="images/Velocimetro.png" alt="">
+      <img class="warp__needle" id="warpNeedle" src="images/Ponteiro.png" alt="">
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="phero" id="inicio">
+      <div class="phero__content">
+        <p class="eyebrow eyebrow--light"><span>Portfólio</span></p>
+        <h1 class="phero__title"><span class="line"><span class="red">Restaurações</span></span><span class="line"><span>que contam</span></span><span class="line"><span>histórias.</span></span></h1>
+        <p class="phero__text reveal" style="--d:.7s">Cada projeto é único. Aqui você confere com diversos pontos de vista, realçamos e o resultado de muito trabalho, técnicas e paixão por carros antigos.</p>
+        <a href="#contato" class="btn btn--pulse reveal" style="--d:.9s">Entrar em contato</a>
+      </div>
+    </section>
+
+    <!-- ============ ANTES E DEPOIS ============ -->
+    <section class="results" id="resultados">
+      <p class="eyebrow eyebrow--dark reveal"><span>Resultados reais</span></p>
+      <h2 class="results__title reveal" style="--d:.1s">Antes e Depois.</h2>
+      <p class="results__text reveal" style="--d:.2s">Acompanhe alguns dos nossos projetos de restauração completa, do jeito que eles merecem. Com respeito à originalidade e muito cuidado em cada detalhe.</p>
+
+      <div class="carousel pcarousel reveal" id="carousel" aria-roledescription="carrossel" aria-label="Antes e depois dos projetos">
+        <button class="carousel__arrow carousel__arrow--prev" id="prev" aria-label="Imagem anterior">
+          <img src="images/seta.png" alt="" aria-hidden="true">
+        </button>
+
+        <div class="pframe">
+          <!-- FOTOS: só elas deslizam. Cada carro tem 2 slides seguidos: ANTES e DEPOIS (mesmo data-project). -->
+          <div class="carousel__viewport" id="viewport">
+            <div class="carousel__track" id="track">
+
+              <!-- ===== PROJETO 1: Chevy Chevelle 1970 ===== -->
+              <figure class="pslide" data-project="0">
+                <img src="images/Antes/chevy_chevelle_antes.png" alt="Chevy Chevelle 1970 antes da restauração" loading="eager" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="0">
+                <img src="images/Depois/chevy_chevelle_depois.png" alt="Chevy Chevelle 1970 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PROJETO 2: Chevrolet Chevette 1973 ===== -->
+              <figure class="pslide" data-project="1">
+                <img src="images/Antes/chevette_antes.png" alt="Chevrolet Chevette 1973 antes da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="1">
+                <img src="images/Depois/chevette_depois.png" alt="Chevrolet Chevette 1973 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PROJETO 3: Chevrolet Opala ===== -->
+              <figure class="pslide" data-project="2">
+                <img src="images/Antes/opala_antes.png" alt="Chevrolet Opala Comodoro 1978 antes da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="2">
+                <img src="images/Depois/opala_depois.png" alt="Chevrolet Opala Comodoro 1978 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PROJETO 4: Volkswagen Fusca ===== -->
+              <figure class="pslide" data-project="3">
+                <img src="images/Antes/fusca_antes.png" alt="Volkswagen Fusca 1972 antes da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="3">
+                <img src="images/Depois/fusca_depois.png" alt="Volkswagen Fusca 1972 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PROJETO 5: Maverick GT 1975 ===== -->
+              <figure class="pslide" data-project="4">
+                <img src="images/Antes/Maverick GT_antes.png" alt="Maverick GT 1975 antes da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="4">
+                <img src="images/Depois/Maverick GT_depois.png" alt="Maverick GT 1975 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PROJETO 6: Puma GTE 1976 ===== -->
+              <figure class="pslide" data-project="5">
+                <img src="images/Antes/puma_antes.png" alt="Puma GTE 1976 antes da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--antes">Antes</figcaption>
+              </figure>
+              <figure class="pslide" data-project="5">
+                <img src="images/Depois/puma_depois.png" alt="Puma GTE 1976 depois da restauração" loading="lazy" draggable="false">
+                <figcaption class="pslide__tag pslide__tag--depois">Depois</figcaption>
+              </figure>
+
+              <!-- ===== PRÓXIMO CARRO: copie os 2 <figure> acima, troque as fotos e use data-project="6" ===== -->
+
+            </div>
+          </div>
+
+          <!-- TEXTO: fica parado. Só troca (suave) quando muda de carro. -->
+          <div class="pinfo" id="info">
+            <div class="pinfo__item is-active" data-project="0">
+              <p class="eyebrow eyebrow--small">Chevy Chevelle 1970</p>
+              <h3>Força e estilo<br>em perfeita harmonia.</h3>
+              <p class="pinfo__text">Este Chevrolet Chevelle SS 1970 chegou à Classic Garage em condições que exigiam muito mais do que uma simples reforma. Era preciso devolver a vida a um verdadeiro ícone.</p>
+              <p class="pinfo__text">Assumimos o desafio e, com dedicação, cuidado e atenção a cada detalhe, realizamos uma restauração completa, recuperando suas linhas marcantes e toda a imponência desse clássico. O resultado? Uma máquina renovada, pronta para impressionar novamente.</p>
+              <p class="pinfo__text">Mais do que recuperar sua aparência, nosso objetivo foi preservar sua essência e valorizar sua história. Cada etapa foi pensada para devolver a esse ícone o destaque que ele merece, unindo tradição, elegância e personalidade.</p>
+              <a href="#contato" class="btn btn--tiny">Ver detalhes</a>
+            </div>
+            <div class="pinfo__item" data-project="1" aria-hidden="true">
+              <p class="eyebrow eyebrow--small">Chevrolet Chevette 1973</p>
+              <h3>Um clássico nacional,<br>renascido para fazer história.</h3>
+              <p class="pinfo__text">Este Chevrolet Chevette 1973 chegou à Classic Garage em condições que exigiam uma restauração completa. Com a carroceria desgastada pelo tempo, danos na lataria e diversos detalhes comprometidos, era hora de devolver a esse clássico o respeito que sua história merece.</p>
+              <p class="pinfo__text">Assumimos o desafio e, com dedicação, cuidado e atenção a cada detalhe, transformamos completamente o veículo. Cada etapa foi pensada para recuperar sua originalidade e valorizar suas linhas clássicas.</p>
+              <p class="pinfo__text">O resultado? Um Chevette completamente renovado, com aparência impecável e pronto para voltar a chamar a atenção por onde passar.</p>
+              <a href="#contato" class="btn btn--tiny" tabindex="-1">Ver detalhes</a>
+            </div>
+            <div class="pinfo__item" data-project="2" aria-hidden="true">
+              <p class="eyebrow eyebrow--small">Chevrolet Opala Comodoro 1978</p>
+              <h3>Um ícone das estradas brasileiras,<br>renascido em cada detalhe.</h3>
+              <p class="pinfo__text">Este Chevrolet Opala chegou à Classic Garage com as marcas de uma longa história. O desgaste do tempo, a pintura comprometida, os pontos de ferrugem e os danos na carroceria mostravam que esse clássico precisava de uma restauração completa para recuperar seu verdadeiro valor.</p>
+              <p class="pinfo__text">Assumimos o desafio de devolver ao veículo sua essência. Com dedicação, cuidado e atenção aos mínimos detalhes, trabalhamos na recuperação da carroceria, renovação da pintura e restauração dos acabamentos, preservando suas características originais.</p>
+              <p class="pinfo__text">O resultado? Um Opala completamente renovado, com sua elegante pintura bege, detalhes cromados impecáveis e toda a presença de um verdadeiro clássico nacional, pronto para escrever novos capítulos de sua história.</p>
+              <a href="#contato" class="btn btn--tiny" tabindex="-1">Ver detalhes</a>
+            </div>
+            <div class="pinfo__item" data-project="3" aria-hidden="true">
+              <p class="eyebrow eyebrow--small">Volkswagen Fusca 1972</p>
+              <h3>Um ícone das ruas,<br>renovado para brilhar novamente.</h3>
+              <p class="pinfo__text">Este Volkswagen Fusca chegou à Classic Garage com marcas evidentes da ação do tempo. A pintura desgastada, os pontos de ferrugem e os detalhes comprometidos escondiam a beleza de um dos automóveis mais queridos da história.</p>
+              <p class="pinfo__text">Assumimos o desafio e, com uma restauração completa, dedicação e atenção a cada detalhe, devolvemos ao veículo sua elegância e personalidade. A carroceria foi renovada, a pintura recuperou seu brilho e os acabamentos receberam o cuidado que esse clássico merece.</p>
+              <p class="pinfo__text">O resultado? Um Fusca completamente restaurado, com visual impecável e sua essência preservada, pronto para continuar fazendo história por onde passar.</p>
+              <a href="#contato" class="btn btn--tiny" tabindex="-1">Ver detalhes</a>
+            </div>
+            <div class="pinfo__item" data-project="4" aria-hidden="true">
+              <p class="eyebrow eyebrow--small">Maverick GT 1975</p>
+              <h3>Potência e personalidade<br>em cada detalhe.</h3>
+              <p class="pinfo__text">Este clássico chegou à Classic Garage com marcas evidentes do tempo e uma aparência que já não fazia jus à sua imponência. Era preciso muito mais do que uma renovação estética: era hora de resgatar sua identidade e devolver a ele todo o seu destaque.</p>
+              <p class="pinfo__text">Assumimos o desafio e, com dedicação, cuidado e atenção a cada detalhe, realizamos uma restauração completa, recuperando sua carroceria, pintura e acabamentos. Cada etapa foi pensada para valorizar suas linhas esportivas e preservar a personalidade que faz desse modelo um verdadeiro ícone.</p>
+              <p class="pinfo__text">O resultado? Um clássico completamente renovado, com visual marcante, acabamento impecável e pronto para voltar a impressionar. Uma transformação que une tradição, potência e estilo em perfeita harmonia.</p>
+              <a href="#contato" class="btn btn--tiny" tabindex="-1">Ver detalhes</a>
+            </div>
+            <div class="pinfo__item" data-project="5" aria-hidden="true">
+              <p class="eyebrow eyebrow--small">Puma GTE 1976</p>
+              <h3>Potência e elegância,<br>renascidas para impressionar.</h3>
+              <p class="pinfo__text">Este clássico esportivo chegou à Classic Garage em condições que exigiam uma restauração completa. Com a pintura desgastada, marcas de ferrugem e diversos detalhes comprometidos pelo tempo, era hora de resgatar toda a beleza e personalidade desse ícone das pistas.</p>
+              <p class="pinfo__text">Assumimos o desafio e, com dedicação, cuidado e atenção a cada detalhe, transformamos completamente o veículo. A carroceria foi renovada, a pintura amarela recuperou seu brilho e as rodas esportivas deram ainda mais personalidade ao conjunto.</p>
+              <p class="pinfo__text">O resultado? Um clássico completamente restaurado, com visual marcante, acabamento impecável e pronto para voltar a atrair olhares por onde passar.</p>
+              <a href="#contato" class="btn btn--tiny" tabindex="-1">Ver detalhes</a>
+            </div>
+            <!-- PRÓXIMO CARRO: copie o bloco acima, troque os textos e use data-project="6" -->
+          </div>
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--next" id="next" aria-label="Próxima imagem">
+          <img src="images/seta.png" alt="" aria-hidden="true">
+        </button>
+      </div>
+      <div class="carousel__dots" id="dots" role="tablist" aria-label="Escolher projeto"></div>
+    </section>
+
+    <!-- ============ CTA OPALA ============ -->
+    <section class="pcta" id="contato">
+      <div class="pcta__content">
+        <p class="eyebrow eyebrow--light eyebrow--small reveal"><span>Quer restaurar restaurar? O seu clássico ?</span></p>
+        <h2 class="pcta__title reveal" style="--d:.1s">Seu projeto também<br>pode estar <span class="red">aqui.</span></h2>
+        <p class="pcta__text reveal" style="--d:.2s">Se você tem um clássico e deseja devolver a ele todo o<br class="d-br"> seu esplendor, entre em contato conosco. Será um prazer<br class="d-br"> fazer parte dessa história e transformar seu projeto em<br class="d-br"> realidade!</p>
+        <!-- Troque pelo seu WhatsApp: https://wa.me/55DDDNUMERO -->
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn btn--pulse reveal" style="--d:.3s">Entrar em contato</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
